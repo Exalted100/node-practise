@@ -1,4 +1,7 @@
 const express = require('express');
+const mongoose = require("mongoose");
+const MONGO_URI = require("./keys")
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const app = express();
 
 const absolutePath = __dirname + "/view/index.html";
