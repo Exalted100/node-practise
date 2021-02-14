@@ -21,9 +21,24 @@ const userSchema = new Schema({
 const User = mongoose.model("User", userSchema);
 
 const homePage = __dirname + "/view/index.html";
+const signup = __dirname + "/view/signup.html";
+const login = __dirname + "/view/login.html";
+const userProfile = __dirname + "/view/userProfile.html";
 
 app.get("/", (req, res) => {
     res.sendFile(homePage)
+})
+
+app.get("/signup", (req, res) => {
+  res.sendFile(signup)
+})
+
+app.get("/login", (req, res) => {
+  res.sendFile(login)
+})
+
+app.get("/userProfile", (req, res) => {
+  res.sendFile(userProfile)
 })
 
 app.post("/", (req, res) => {
