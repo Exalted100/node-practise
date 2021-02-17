@@ -56,7 +56,8 @@ const userSchema = new Schema({
     lastName: String,
     age: Number,
     email: String,
-    password: String
+    password: String,
+    todo: [String]
   })
 
 const User = mongoose.model("User", userSchema);
